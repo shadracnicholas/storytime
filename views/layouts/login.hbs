@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
         integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>StoryBooks Login</title>
+    <title>StoryTime Login</title>
 </head>
 
 <body>
-    <div class="container login-container">
-        <div class="card">
-            <div class="card-content">
+    <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full">
+            <div>
+                <svg class="mx-auto h-24 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.4142 10L11.7071 11.2929C12.0976 11.6834 12.0976 12.3166 11.7071 12.7071C11.3166 13.0976 10.6834 13.0976 10.2929 12.7071L9 11.4142L5.70711 14.7071C5.31658 15.0976 4.68342 15.0976 4.29289 14.7071C3.90237 14.3166 3.90237 13.6834 4.29289 13.2929L7.58579 10L6.29289 8.70711C5.90237 8.31658 5.90237 7.68342 6.29289 7.29289C6.68342 6.90237 7.31658 6.90237 7.70711 7.29289L9 8.58579L9.53553 8.05025C10.3581 7.22765 10.8645 6.14794 10.9764 5H3C2.44772 5 2 4.55228 2 4C2 3.44772 2.44772 3 3 3H8V2C8 1.44772 8.44772 1 9 1C9.55228 1 10 1.44772 10 2V3H15C15.5523 3 16 3.44772 16 4C16 4.55228 15.5523 5 15 5H12.9832C12.8665 6.67921 12.1476 8.26657 10.9497 9.46447L10.4142 10Z"
+                        fill="#A5B3BB" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.9231 21.3846L13.3334 18H18.6667L20.0769 21.3846C20.2894 21.8944 20.8748 22.1355 21.3846 21.9231C21.8944 21.7107 22.1355 21.1252 21.9231 20.6154L16.9231 8.61538C16.5812 7.79487 15.4188 7.79487 15.0769 8.61538L10.0769 20.6154C9.86452 21.1252 10.1056 21.7107 10.6154 21.9231C11.1252 22.1355 11.7107 21.8944 11.9231 21.3846ZM16 11.6L17.8334 16H14.1667L16 11.6Z"
+                        fill="#0D2B3E" />
+                </svg>
+
+                <h2 class="text-center text-3xl leading-9 font-extrabold text-gray-900">
+                    StoryTime
+                </h2>
+            </div>
+            <div class="mt-8">
                 {{{body}}}
             </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>

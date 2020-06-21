@@ -1,8 +1,8 @@
-# StoryBooks
+# StoryTime
 
 > Create public and private stories from your life
 
-This app uses Node.js/Express/MongoDB with Google OAuth for authentication
+This app uses Node.js/Express/MongoDB/TailwindCSS with Google OAuth for authentication
 
 ## Usage
 
