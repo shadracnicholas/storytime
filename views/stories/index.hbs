@@ -1,26 +1,76 @@
-<h1>Stories</h1>
-<div class="row">
-    {{#each stories}}
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                {{{editIcon user ../user _id}}}
+<main>
+
+    {{#if stories}}
+
+    <div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div class="relative max-w-lg mx-auto lg:max-w-7xl">
+            <div>
+                <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+                    Stories from the community
+                </h2>
             </div>
-            <div class="card-content center-align">
-                <h5>{{title}}</h5>
-                <p>{{stripTags (truncate body 150)}}</p>
-                <br>
-                <div class="chip">
-                    <img src="{{user.image}}" alt="">
-                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+            <div class="mt-12 grid gap-16 border-t-2 border-gray-100 pt-12 lg:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
+
+                {{#each stories}}
+
+                <div>
+                    <div>
+                        <a href="/stories/{{_id}}" class="inline-block">
+                            <span
+                                class="capitalize inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+                                {{status}}
+                            </span>
+                        </a>
+                    </div>
+                    <a href="/stories/{{_id}}" class="block">
+                        <h3 class="mt-4 text-xl leading-7 font-semibold text-gray-900">
+                            {{title}}
+                        </h3>
+                        <p class="mt-3 text-base leading-6 text-gray-500">
+                            {{stripTags (truncate body 150)}}
+                        </p>
+                    </a>
+                    <div class="mt-6 flex items-center">
+                        <div class="flex-shrink-0">
+                            <a href="#">
+                                <img class="h-10 w-10 rounded-full" src="{{user.image}}" alt="" />
+                            </a>
+                        </div>
+                        <div class=" ml-3">
+                            <p class="text-sm leading-5 font-medium text-gray-900">
+                                <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                            </p>
+                            <div class="flex text-sm leading-5 text-gray-500">
+                                <time datetime="2020-03-16">
+                                    {{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}
+                                </time>
+                                <span class="mx-1">
+                                    &middot;
+                                </span>
+                                <span>
+                                    1 min read
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card-action center-align">
-                <a href="/stories/{{_id}}" class="btn grey">Read More</a>
+
+                {{/each}}
+
             </div>
         </div>
     </div>
+
     {{else}}
-    <p>No stories to display</p>
-    {{/each}}
-</div>
+
+    <div class="flex flex-col items-center justify-center">
+        <span class="text-2xl">No one has shared a story yet.</span>
+        <a href="/stories/add"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-full text-indigo-700 bg-indigo-100 hover:bg-indigo-50 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-indigo-200 transition ease-in-out duration-150">
+            Create Story
+        </a>
+    </div>
+    {{/if}}
+    <!-- /End replace -->
+    </div>
+</main>

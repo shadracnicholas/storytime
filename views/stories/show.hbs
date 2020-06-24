@@ -1,23 +1,51 @@
-<div class="row">
-    <div class="col s12 m8">
-        <h3>{{story.title}}
-            <small>{{{editIcon story.user user story._id false}}}</small>
-        </h3>
-        <div class="card story">
-            <div class="card-content">
-                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
-                {{{story.body}}}
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card center-align">
-            <div class="card-content">
-                <span class="card-title">{{story.user.displayName}}</span>
-                <img src="{{story.user.image}}" class="circle responsive-img img-small">
-            </div>
-            <div class="card-action">
-                <a href="/stories/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
+<div class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+    <div class="relative max-w-lg mx-auto lg:max-w-7xl">
+        <div class="mt-6 grid gap-16 border-t-2 border-gray-100 pt-10 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
+            <div>
+                <p class="text-sm leading-5 text-gray-500">
+                    <time datetime="2020-03-16">
+                    </time>
+                </p>
+                <div class="mt-6 flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#">
+                            <img class="h-10 w-10 rounded-full" src="{{story.user.image}}" alt="" />
+                        </a>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm leading-5 font-medium text-gray-900">
+                            <a href="/stories/user/{{story.user._id}}">
+                                {{story.user.displayName}}
+                            </a>
+                        </p>
+                        <div class="flex text-sm leading-5 text-gray-500">
+                            <time datetime="2020-03-15">
+                                {{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}
+                            </time>
+                            <span class="mx-1">
+                                &middot;
+                            </span>
+                            <span>
+                                1 min read
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                        {{story.title}}
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                        {{{story.body}}}
+                    </p>
+                </a>
+                <div class="mt-3">
+                    <a href="/stories/user/{{story.user._id}}"
+                        class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">
+                        More From {{story.user.firstName}}
+                    </a>
+                </div>
             </div>
         </div>
     </div>

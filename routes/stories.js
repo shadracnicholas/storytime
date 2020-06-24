@@ -22,7 +22,10 @@ router.post("/", ensureAuth, async (req, res) => {
     res.redirect("/dashboard");
   } catch (err) {
     console.error(err);
-    res.render("error/500");
+    res.render("error/500", {
+      name: req.user.firstName,
+      image: req.user.image,
+    });
   }
 });
 
@@ -42,7 +45,10 @@ router.get("/", ensureAuth, async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.render("error/500");
+    res.render("error/500", {
+      name: req.user.firstName,
+      image: req.user.image,
+    });
   }
 });
 
