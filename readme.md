@@ -7,9 +7,10 @@ This app uses Node.js/Express/MongoDB/TailwindCSS with Google OAuth for authenti
 
 ## Usage
 
+```
+#Setup Environment
 Add your mongoDB URI and Google OAuth credentials to the config.env file
 
-```
 # Install dependencies
 npm install
 
