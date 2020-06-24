@@ -2,6 +2,8 @@
 
 > Create public and private stories from your life
 
+https://github.com/shadracnicholas/storytime/blob/master/Screenshot%202020-06-24%20at%2021.14.40.png
+
 This app uses Node.js/Express/MongoDB/TailwindCSS with Google OAuth for authentication
 
 ## Usage
